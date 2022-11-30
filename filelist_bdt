@@ -1,5 +1,13 @@
-/data0/wgu/checkout_links/		checkout_data_numi_run1_all.root					./checkout_rootfiles_correct_bdt/		./processed_checkout_rootfiles/		0	0
-/data0/wgu/checkout_links/		checkout_data_extnumi_run1.root					./checkout_rootfiles_correct_bdt/		./processed_checkout_rootfiles/		0	0
+/data0/wgu/checkout_links/		checkout_data_numi_run3_rhc.root						./checkout_rootfiles_correct_bdt/		./processed_checkout_rootfiles/		0	0
+/data0/wgu/checkout_links/		checkout_data_extnumi_run3.root							./checkout_rootfiles_correct_bdt/		./processed_checkout_rootfiles/		0	0
+end					end											end						end					-1	-1
+/data0/wgu/checkout_links/		checkout_prodgenie_cc_pi0_overlay_run1_PF.root						./checkout_rootfiles_correct_bdt/		./processed_checkout_rootfiles/		0	0
+/data0/wgu/checkout_links/		checkout_prodgenie_cc_pi0_overlay_run3_PF.root						./checkout_rootfiles_correct_bdt/		./processed_checkout_rootfiles/		0	0	
+end					end											end						end					-1	-1
+/home/xqian/wire-cell/LEEana/numi/	checkout_data_numi_run1_FHC.root							./checkout_rootfiles_correct_bdt/		./processed_checkout_rootfiles/		0	0
+/home/xqian/wire-cell/LEEana/numi/	checkout_data_numi_run1_RHC.root							./checkout_rootfiles_correct_bdt/		./processed_checkout_rootfiles/		0	0
+/data0/wgu/checkout_links/		checkout_data_numi_run1_all.root							./checkout_rootfiles_correct_bdt/		./processed_checkout_rootfiles/		0	0
+/data0/wgu/checkout_links/		checkout_data_extnumi_run1.root								./checkout_rootfiles_correct_bdt/		./processed_checkout_rootfiles/		0	0
 end					end											end						end					-1	-1
 /data0/wgu/checkout_links/		WCPcheckout_prodgenie_bnb_cc_pi0_overlay_WCP_DetVar_CV_run1.root			./checkout_rootfiles_correct_bdt/DetVar/		./processed_checkout_rootfiles/DetVar/		0	0
 /data0/wgu/checkout_links/		WCPcheckout_prodgenie_bnb_cc_pi0_overlay_WCP_DetVar_LYAttenuation_run1.root		./checkout_rootfiles_correct_bdt/DetVar/		./processed_checkout_rootfiles/DetVar/		0	0
