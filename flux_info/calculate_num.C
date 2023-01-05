@@ -1,6 +1,9 @@
-void calculate_num(double init_E = 0., double final_E = 5, int nstep = 1000, double POT = 5.327e19, double init_difval=0, double final_difval=0){
-  TFile *file = new TFile("gh_averaged_numu_flux.root");
-  TGraph *gflux = (TGraph*)file->Get("gh_averaged_numu_flux"); // numu/POT/GeV/cm2
+void calculate_num(double init_E = 0., double final_E = 5, 
+                   int nstep = 1000, double POT = 5.327e19, 
+                   double init_difval=0, double final_difval=0,
+                   std::string filename="gh_averaged_numu_flux.root", std::string grname="gh_averaged_numu_flux"){
+  TFile *file = new TFile(filename.c_str());
+  TGraph *gflux = (TGraph*)file->Get(grname.c_str()); // numu/POT/GeV/cm2
 
   double density = 1.3836; //g/cm^3
   double volume = 5.82515e7; //cm^3
