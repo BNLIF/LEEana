@@ -1,4 +1,4 @@
-void calculate_num(double init_E = 0., double final_E = 5, 
+double calculate_num(double init_E = 0., double final_E = 5, 
                    int nstep = 1000, double POT = 5.327e19, 
                    double init_difval=0, double final_difval=0,
                    std::string filename="gh_averaged_numu_flux.root", std::string grname="gh_averaged_numu_flux"){
@@ -30,4 +30,6 @@ void calculate_num(double init_E = 0., double final_E = 5,
   std::cout << "Final constant        : " << final_constant * (final_difval - init_difval) << std::endl;
   else 
   std::cout << "Final constant        : " << final_constant << std::endl;
+
+  return final_constant;
 }
