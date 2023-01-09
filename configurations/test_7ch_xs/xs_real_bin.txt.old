@@ -1,0 +1,13 @@
+1	19		numuCC.inside.Enu.le.705.gt.200		145693		0.022		0.011	
+2	19		numuCC.inside.Enu.le.1050.gt.705	80001.2		0.022		0.011
+3	19		numuCC.inside.Enu.le.1570.gt.1050	46606.7		0.022		0.011
+4	19		numuCC.inside.Enu.le.4000.gt.1570	49740.4		0.022		0.011
+5	19		nueCC.inside.Enu.le.705.gt.200 	        49848.2		0.022		0.011
+6	19		nueCC.inside.Enu.le.1050.gt.705	        48119		0.022		0.011
+7	19		nueCC.inside.Enu.le.1570.gt.1050	42913.6		0.022		0.011
+8	19		nueCC.inside.Enu.le.4000.gt.1570	31281.6		0.022		0.011
+9	19		NCPi0.inside.Pi0En.le.500.gt.0	        27805.7		0.022		0.011
+10	19		NCPi0.inside.Pi0En.le.1000.gt.500	8572		0.022		0.011
+11	19		NCPi0.inside.Pi0En.le.1500.gt.1000	8572		0.022		0.011
+-1	-1		End					-1		-1		-1
+#bin	#cut_file  	#cut					#const		#pot_err	#target_err
