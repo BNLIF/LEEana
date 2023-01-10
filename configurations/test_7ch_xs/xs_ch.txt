@@ -1,7 +1,7 @@
-nueCC_signal_FC_nueoverlay
-nueCC_signal_PC_nueoverlay
-numuCC_signal_nonueCC_FC_overlay
-numuCC_signal_nonueCC_PC_overlay
-NCpi0_signal_nonueCC_overlay
-End
-Name_of_histogram_used_for_signal
+nueCC_signal_FC_nueoverlay        1
+nueCC_signal_PC_nueoverlay        0
+numuCC_signal_nonueCC_FC_overlay  1
+numuCC_signal_nonueCC_PC_overlay  0
+NCpi0_signal_nonueCC_overlay      1
+End                               -1
+Name_of_histogram_used_for_signal -1 
