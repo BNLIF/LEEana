@@ -1,3 +1,13 @@
+/data0/xqian/MicroBooNE/run4a_files/	checkout_data_bnb_run4a.root							./checkout_rootfiles_correct_bdt/		./processed_checkout_rootfiles/		3	0
+/data0/xqian/MicroBooNE/run4a_files/	checkout_data_extbnb_run4a.root							./checkout_rootfiles_correct_bdt/		./processed_checkout_rootfiles/		3	0
+end					end											end						end					-1	-1
+/data0/xqian/MicroBooNE/run4a_files/	checkout_prodgene_bnb_overlay_run4a.root					./checkout_rootfiles_correct_bdt/		./processed_checkout_rootfiles/		0	0
+/data0/xqian/MicroBooNE/run4a_files/	checkout_prodgenie_dirt_overlay_run4a.root					./checkout_rootfiles_correct_bdt/		./processed_checkout_rootfiles/		0	0
+end					end											end						end					-1	-1
+/data0/wgu/checkout_links/		checkout_data_extnumi_run2a_PF.root						./checkout_rootfiles_correct_bdt/		./processed_checkout_rootfiles/		0	0
+/data0/wgu/checkout_links/		checkout_data_extnumi_run2b_PF.root						./checkout_rootfiles_correct_bdt/		./processed_checkout_rootfiles/		0	0
+/data0/wgu/checkout_links/		checkout_data_numi_run2_all_PF.root						./checkout_rootfiles_correct_bdt/		./processed_checkout_rootfiles/		0	0
+end					end											end						end					-1	-1
 /data0/wgu/checkout_links/		checkout_data_numi_run3_rhc.root						./checkout_rootfiles_correct_bdt/		./processed_checkout_rootfiles/		0	0
 /data0/wgu/checkout_links/		checkout_data_extnumi_run3.root							./checkout_rootfiles_correct_bdt/		./processed_checkout_rootfiles/		0	0
 end					end											end						end					-1	-1
