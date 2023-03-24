@@ -28,6 +28,40 @@ void test_fid_boundary(){
   std::cout << bx[0] << " " << bx[1] << std::endl;
   std::cout << by[0] << " " << by[1] << std::endl;
   std::cout << bz[0] << " " << bz[1] << std::endl;
+
+
+  TTree *T_BDTvars =  (TTree*)file->Get("wcpselection/T_BDTvars");
+  T_eval->AddFriend(T_BDTvars);
+
+  TCanvas *c1 = new TCanvas("c1","c1",1200,800);
+  c1->Divide(2,2);
+  c1->cd(1);
+  TH1F *hx1 = new TH1F("hx1","hx1",100,0,256);
+  TH1F *hx2 = new TH1F("hx2","hx2",100,0,256);
+
+  T_eval->Project("hx1","truth_vtxX");
+  T_eval->Project("hx2","truth_vtxX","T_BDTvars.nue_score>7.0");
+  hx2->Divide(hx1);
+  hx2->Draw();
+
+  c1->cd(2);
+  TH1F *hy1 = new TH1F("hy1","hy1",100,-116,118);
+  TH1F *hy2 = new TH1F("hy2","hy2",100,-116,118);
+
+  T_eval->Project("hy1","truth_vtxY");
+  T_eval->Project("hy2","truth_vtxY","T_BDTvars.nue_score>7.0");
+  hy2->Divide(hy1);
+  hy2->Draw();
+
+
+  c1->cd(3);
+  TH1F *hz1 = new TH1F("hz1","hz1",100,0,1056);
+  TH1F *hz2 = new TH1F("hz2","hz2",100,0,1056);
+
+  T_eval->Project("hz1","truth_vtxZ");
+  T_eval->Project("hz2","truth_vtxZ","T_BDTvars.nue_score>7.0");
+  hz2->Divide(hz1);
+  hz2->Draw();
   
-  
+  //  T_eval->Draw("truth_vtxX","T_BDTvars.nue_score>7.0");
 }
