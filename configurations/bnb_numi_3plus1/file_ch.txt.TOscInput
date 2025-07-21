@@ -1,0 +1,147 @@
+./processed_checkout_rootfiles/checkout_data_bnb_run1_all.root                                  all
+./processed_checkout_rootfiles/checkout_data_bnb_run2_all.root  				all
+./processed_checkout_rootfiles/checkout_data_bnb_run3_all.root  				all
+./processed_checkout_rootfiles/wcp_data_extbnb_run1_mcc9_v08_00_00_53_checkout.root		all
+./processed_checkout_rootfiles/wcp_data_extbnb_run2_mcc9_v08_00_00_53_checkout.root		all
+./processed_checkout_rootfiles/wcp_data_extbnb_run3_mcc9_v08_00_00_53_checkout.root		all
+./processed_checkout_rootfiles/checkout_prodgenie_dirt_overlay_run1_all.root			all
+./processed_checkout_rootfiles/checkout_prodgenie_dirt_overlay_run2_all.root			all
+./processed_checkout_rootfiles/checkout_prodgenie_dirt_overlay_run3_all.root			all
+./processed_checkout_rootfiles/checkout_prodgenie_bnb_intrinsic_nue_overlay_run1.root		outFV
+./processed_checkout_rootfiles/checkout_prodgenie_bnb_intrinsic_nue_overlay_run1.root		nueCCinFV
+./processed_checkout_rootfiles/checkout_prodgenie_bnb_intrinsic_nue_overlay_run1.root	    	badmatch
+./processed_checkout_rootfiles/checkout_prodgenie_bnb_intrinsic_nue_overlay_run2.root		outFV
+./processed_checkout_rootfiles/checkout_prodgenie_bnb_intrinsic_nue_overlay_run2.root		nueCCinFV
+./processed_checkout_rootfiles/checkout_prodgenie_bnb_intrinsic_nue_overlay_run2.root	    	badmatch
+./processed_checkout_rootfiles/checkout_prodgenie_bnb_intrinsic_nue_overlay_run3.root		outFV
+./processed_checkout_rootfiles/checkout_prodgenie_bnb_intrinsic_nue_overlay_run3.root		nueCCinFV
+./processed_checkout_rootfiles/checkout_prodgenie_bnb_intrinsic_nue_overlay_run3.root	    	badmatch
+./processed_checkout_rootfiles/checkout_prodgenie_bnb_nu_overlay_run1.root			outFV
+./processed_checkout_rootfiles/checkout_prodgenie_bnb_nu_overlay_run1.root			numuCCinFV
+./processed_checkout_rootfiles/checkout_prodgenie_bnb_nu_overlay_run1.root			nueCCinFV
+./processed_checkout_rootfiles/checkout_prodgenie_bnb_nu_overlay_run1.root			NCinFV
+./processed_checkout_rootfiles/checkout_prodgenie_bnb_nu_overlay_run1.root			CCpi0inFV
+./processed_checkout_rootfiles/checkout_prodgenie_bnb_nu_overlay_run1.root			NCpi0inFV
+./processed_checkout_rootfiles/checkout_prodgenie_bnb_nu_overlay_run1.root		    	badmatch
+./processed_checkout_rootfiles/checkout_prodgenie_bnb_nu_overlay_run2.root			outFV
+./processed_checkout_rootfiles/checkout_prodgenie_bnb_nu_overlay_run2.root			numuCCinFV
+./processed_checkout_rootfiles/checkout_prodgenie_bnb_nu_overlay_run2.root			nueCCinFV
+./processed_checkout_rootfiles/checkout_prodgenie_bnb_nu_overlay_run2.root			NCinFV
+./processed_checkout_rootfiles/checkout_prodgenie_bnb_nu_overlay_run2.root			CCpi0inFV
+./processed_checkout_rootfiles/checkout_prodgenie_bnb_nu_overlay_run2.root			NCpi0inFV
+./processed_checkout_rootfiles/checkout_prodgenie_bnb_nu_overlay_run2.root		    	badmatch
+./processed_checkout_rootfiles/checkout_prodgenie_bnb_nu_overlay_run3.root			outFV
+./processed_checkout_rootfiles/checkout_prodgenie_bnb_nu_overlay_run3.root			numuCCinFV
+./processed_checkout_rootfiles/checkout_prodgenie_bnb_nu_overlay_run3.root			nueCCinFV
+./processed_checkout_rootfiles/checkout_prodgenie_bnb_nu_overlay_run3.root			NCinFV
+./processed_checkout_rootfiles/checkout_prodgenie_bnb_nu_overlay_run3.root			CCpi0inFV
+./processed_checkout_rootfiles/checkout_prodgenie_bnb_nu_overlay_run3.root			NCpi0inFV
+./processed_checkout_rootfiles/checkout_prodgenie_bnb_nu_overlay_run3.root		    	badmatch
+./processed_checkout_rootfiles/checkout_prodgenie_bnb_overlay_numu2nue_ccactive_run1_PF.root 	outFV
+./processed_checkout_rootfiles/checkout_prodgenie_bnb_overlay_numu2nue_ccactive_run1_PF.root 	nueCCinFV
+./processed_checkout_rootfiles/checkout_prodgenie_bnb_overlay_numu2nue_ccactive_run1_PF.root 	badmatch
+./processed_checkout_rootfiles/checkout_prodgenie_bnb_overlay_numu2nue_ccactive_run2_PF.root 	outFV
+./processed_checkout_rootfiles/checkout_prodgenie_bnb_overlay_numu2nue_ccactive_run2_PF.root 	nueCCinFV
+./processed_checkout_rootfiles/checkout_prodgenie_bnb_overlay_numu2nue_ccactive_run2_PF.root 	badmatch
+./processed_checkout_rootfiles/checkout_prodgenie_bnb_overlay_numu2nue_ccactive_run3_PF.root 	outFV
+./processed_checkout_rootfiles/checkout_prodgenie_bnb_overlay_numu2nue_ccactive_run3_PF.root 	nueCCinFV
+./processed_checkout_rootfiles/checkout_prodgenie_bnb_overlay_numu2nue_ccactive_run3_PF.root 	badmatch
+
+
+
+
+./processed_checkout_rootfiles/checkout_data_numi_run1_FHC.root       				all
+./processed_checkout_rootfiles/checkout_data_numi_run1_RHC.root 	   			all
+./processed_checkout_rootfiles/checkout_data_numi_run2_FHC.root 	   			all
+./processed_checkout_rootfiles/checkout_data_numi_run2_RHC.root		   			all
+./processed_checkout_rootfiles/checkout_data_numi_run3_RHC.root 	   			all
+
+/home/renney/split_numi_ext_data/checkout_data_extnumi_run1_fhc.root					   all
+/home/renney/split_numi_ext_data/checkout_data_extnumi_run1_rhc.root					   all
+/home/renney/split_numi_ext_data/checkout_data_extnumi_run2_FHC.root					   all
+/home/renney/split_numi_ext_data/checkout_data_extnumi_run2_RHC.root					   all
+./processed_checkout_rootfiles/checkout_data_extnumi_run3.root 						   all
+
+./processed_checkout_rootfiles_numi/run1_fhc_intrinsic_nue_overlay/checkout_prodgenie_run1_fhc_intrinsic_nue_overlay.root	  outFV
+./processed_checkout_rootfiles_numi/run1_fhc_intrinsic_nue_overlay/checkout_prodgenie_run1_fhc_intrinsic_nue_overlay.root	  nueCCinFV
+./processed_checkout_rootfiles_numi/run1_fhc_intrinsic_nue_overlay/checkout_prodgenie_run1_fhc_intrinsic_nue_overlay.root	  badmatch
+																  
+./processed_checkout_rootfiles_numi/run1_rhc_intrinsic_nue_overlay/checkout_prodgenie_run1_rhc_intrinsic_nue_overlay.root	  outFV
+./processed_checkout_rootfiles_numi/run1_rhc_intrinsic_nue_overlay/checkout_prodgenie_run1_rhc_intrinsic_nue_overlay.root	  nueCCinFV
+./processed_checkout_rootfiles_numi/run1_rhc_intrinsic_nue_overlay/checkout_prodgenie_run1_rhc_intrinsic_nue_overlay.root	  badmatch
+
+./processed_checkout_rootfiles_numi/run2_fhc_intrinsic_nue_overlay/checkout_prodgenie_run2_fhc_intrinsic_nue_overlay.root	  outFV
+./processed_checkout_rootfiles_numi/run2_fhc_intrinsic_nue_overlay/checkout_prodgenie_run2_fhc_intrinsic_nue_overlay.root	  nueCCinFV
+./processed_checkout_rootfiles_numi/run2_fhc_intrinsic_nue_overlay/checkout_prodgenie_run2_fhc_intrinsic_nue_overlay.root	  badmatch
+
+./processed_checkout_rootfiles_numi/run2_rhc_intrinsic_nue_overlay/checkout_prodgenie_run2_rhc_intrinsic_nue_overlay.root	  outFV
+./processed_checkout_rootfiles_numi/run2_rhc_intrinsic_nue_overlay/checkout_prodgenie_run2_rhc_intrinsic_nue_overlay.root	  nueCCinFV
+./processed_checkout_rootfiles_numi/run2_rhc_intrinsic_nue_overlay/checkout_prodgenie_run2_rhc_intrinsic_nue_overlay.root	  badmatch
+
+./processed_checkout_rootfiles_numi/run3_rhc_intrinsic_nue_overlay/checkout_prodgenie_run3_rhc_intrinsic_nue_overlay.root	  outFV
+./processed_checkout_rootfiles_numi/run3_rhc_intrinsic_nue_overlay/checkout_prodgenie_run3_rhc_intrinsic_nue_overlay.root	  nueCCinFV
+./processed_checkout_rootfiles_numi/run3_rhc_intrinsic_nue_overlay/checkout_prodgenie_run3_rhc_intrinsic_nue_overlay.root	  badmatch
+
+./processed_checkout_rootfiles_numi/run1_fhc_nu_overlay/checkout_prodgenie_run1_fhc_nu_overlay.root    			  	  outFV
+./processed_checkout_rootfiles_numi/run1_fhc_nu_overlay/checkout_prodgenie_run1_fhc_nu_overlay.root				  numuCCinFV
+./processed_checkout_rootfiles_numi/run1_fhc_nu_overlay/checkout_prodgenie_run1_fhc_nu_overlay.root				  nueCCinFV
+./processed_checkout_rootfiles_numi/run1_fhc_nu_overlay/checkout_prodgenie_run1_fhc_nu_overlay.root				  NCinFV
+./processed_checkout_rootfiles_numi/run1_fhc_nu_overlay/checkout_prodgenie_run1_fhc_nu_overlay.root				  CCpi0inFV
+./processed_checkout_rootfiles_numi/run1_fhc_nu_overlay/checkout_prodgenie_run1_fhc_nu_overlay.root				  NCpi0inFV
+./processed_checkout_rootfiles_numi/run1_fhc_nu_overlay/checkout_prodgenie_run1_fhc_nu_overlay.root				  badmatch
+
+./processed_checkout_rootfiles_numi/run1_rhc_nu_overlay/checkout_prodgenie_run1_rhc_nu_overlay.root				  outFV
+./processed_checkout_rootfiles_numi/run1_rhc_nu_overlay/checkout_prodgenie_run1_rhc_nu_overlay.root				  numuCCinFV
+./processed_checkout_rootfiles_numi/run1_rhc_nu_overlay/checkout_prodgenie_run1_rhc_nu_overlay.root				  nueCCinFV
+./processed_checkout_rootfiles_numi/run1_rhc_nu_overlay/checkout_prodgenie_run1_rhc_nu_overlay.root				  NCinFV
+./processed_checkout_rootfiles_numi/run1_rhc_nu_overlay/checkout_prodgenie_run1_rhc_nu_overlay.root				  CCpi0inFV
+./processed_checkout_rootfiles_numi/run1_rhc_nu_overlay/checkout_prodgenie_run1_rhc_nu_overlay.root				  NCpi0inFV
+./processed_checkout_rootfiles_numi/run1_rhc_nu_overlay/checkout_prodgenie_run1_rhc_nu_overlay.root				  badmatch
+
+./processed_checkout_rootfiles_numi/run2_fhc_nu_overlay/checkout_prodgenie_run2_fhc_nu_overlay.root				  outFV
+./processed_checkout_rootfiles_numi/run2_fhc_nu_overlay/checkout_prodgenie_run2_fhc_nu_overlay.root				  numuCCinFV
+./processed_checkout_rootfiles_numi/run2_fhc_nu_overlay/checkout_prodgenie_run2_fhc_nu_overlay.root				  nueCCinFV
+./processed_checkout_rootfiles_numi/run2_fhc_nu_overlay/checkout_prodgenie_run2_fhc_nu_overlay.root				  NCinFV
+./processed_checkout_rootfiles_numi/run2_fhc_nu_overlay/checkout_prodgenie_run2_fhc_nu_overlay.root				  CCpi0inFV
+./processed_checkout_rootfiles_numi/run2_fhc_nu_overlay/checkout_prodgenie_run2_fhc_nu_overlay.root				  NCpi0inFV
+./processed_checkout_rootfiles_numi/run2_fhc_nu_overlay/checkout_prodgenie_run2_fhc_nu_overlay.root				  badmatch
+
+./processed_checkout_rootfiles_numi/run2_rhc_nu_overlay/checkout_prodgenie_run2_rhc_nu_overlay.root				  outFV
+./processed_checkout_rootfiles_numi/run2_rhc_nu_overlay/checkout_prodgenie_run2_rhc_nu_overlay.root				  numuCCinFV
+./processed_checkout_rootfiles_numi/run2_rhc_nu_overlay/checkout_prodgenie_run2_rhc_nu_overlay.root				  nueCCinFV
+./processed_checkout_rootfiles_numi/run2_rhc_nu_overlay/checkout_prodgenie_run2_rhc_nu_overlay.root				  NCinFV
+./processed_checkout_rootfiles_numi/run2_rhc_nu_overlay/checkout_prodgenie_run2_rhc_nu_overlay.root				  CCpi0inFV
+./processed_checkout_rootfiles_numi/run2_rhc_nu_overlay/checkout_prodgenie_run2_rhc_nu_overlay.root				  NCpi0inFV
+./processed_checkout_rootfiles_numi/run2_rhc_nu_overlay/checkout_prodgenie_run2_rhc_nu_overlay.root				  badmatch
+
+./processed_checkout_rootfiles_numi/run3_rhc_nu_overlay/checkout_prodgenie_run3_rhc_nu_overlay.root				  outFV
+./processed_checkout_rootfiles_numi/run3_rhc_nu_overlay/checkout_prodgenie_run3_rhc_nu_overlay.root				  numuCCinFV
+./processed_checkout_rootfiles_numi/run3_rhc_nu_overlay/checkout_prodgenie_run3_rhc_nu_overlay.root				  nueCCinFV
+./processed_checkout_rootfiles_numi/run3_rhc_nu_overlay/checkout_prodgenie_run3_rhc_nu_overlay.root				  NCinFV
+./processed_checkout_rootfiles_numi/run3_rhc_nu_overlay/checkout_prodgenie_run3_rhc_nu_overlay.root				  CCpi0inFV
+./processed_checkout_rootfiles_numi/run3_rhc_nu_overlay/checkout_prodgenie_run3_rhc_nu_overlay.root				  NCpi0inFV
+./processed_checkout_rootfiles_numi/run3_rhc_nu_overlay/checkout_prodgenie_run3_rhc_nu_overlay.root				  badmatch
+
+./processed_checkout_rootfiles_numi/run1_fhc_fullosc_overlay/checkout_prodgenie_run1_fhc_fullosc_overlay.root			  outFV
+./processed_checkout_rootfiles_numi/run1_fhc_fullosc_overlay/checkout_prodgenie_run1_fhc_fullosc_overlay.root			  nueCCinFV
+./processed_checkout_rootfiles_numi/run1_fhc_fullosc_overlay/checkout_prodgenie_run1_fhc_fullosc_overlay.root			  badmatch
+
+./processed_checkout_rootfiles_numi/run1_rhc_fullosc_overlay/checkout_prodgenie_run1_rhc_fullosc_overlay.root			  outFV
+./processed_checkout_rootfiles_numi/run1_rhc_fullosc_overlay/checkout_prodgenie_run1_rhc_fullosc_overlay.root			  nueCCinFV
+./processed_checkout_rootfiles_numi/run1_rhc_fullosc_overlay/checkout_prodgenie_run1_rhc_fullosc_overlay.root			  badmatch
+
+./processed_checkout_rootfiles_numi/run2_fhc_fullosc_overlay/checkout_prodgenie_run2_fhc_fullosc_overlay.root			  outFV
+./processed_checkout_rootfiles_numi/run2_fhc_fullosc_overlay/checkout_prodgenie_run2_fhc_fullosc_overlay.root			  nueCCinFV
+./processed_checkout_rootfiles_numi/run2_fhc_fullosc_overlay/checkout_prodgenie_run2_fhc_fullosc_overlay.root			  badmatch
+
+./processed_checkout_rootfiles_numi/run2_rhc_fullosc_overlay/checkout_prodgenie_run2_rhc_fullosc_overlay.root			  outFV
+./processed_checkout_rootfiles_numi/run2_rhc_fullosc_overlay/checkout_prodgenie_run2_rhc_fullosc_overlay.root			  nueCCinFV
+./processed_checkout_rootfiles_numi/run2_rhc_fullosc_overlay/checkout_prodgenie_run2_rhc_fullosc_overlay.root			  badmatch
+
+./processed_checkout_rootfiles_numi/run3_rhc_fullosc_overlay/checkout_prodgenie_run3_rhc_fullosc_overlay.root			  outFV
+./processed_checkout_rootfiles_numi/run3_rhc_fullosc_overlay/checkout_prodgenie_run3_rhc_fullosc_overlay.root			  nueCCinFV
+./processed_checkout_rootfiles_numi/run3_fhc_fullosc_overlay/checkout_prodgenie_run3_fhc_fullosc_overlay.root			  badmatch
+
+
+end												end
+#file												#cut

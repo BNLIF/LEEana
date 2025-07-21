@@ -1,0 +1,87 @@
+nueCC_FC_bnb                                    kine_reco_Enu   25      0       2500    1       0               0       0               0               0               5       unity           0
+nueCC_PC_bnb                                    kine_reco_Enu   25      0       2500    2       0               0       0               0               0               5       unity           0
+numuCC_nopi0_nonueCC_FC_bnb                     kine_reco_Enu   25      0       2500    3       0               0       0               0               0               5       unity           0
+numuCC_nopi0_nonueCC_PC_bnb                     kine_reco_Enu   25      0       2500    4       0               0       0               0               0               5       unity           0
+CCpi0_nonueCC_FC_bnb                            kine_reco_Enu   25      0       2500    5       0               0       0               0               0               5       unity           0
+CCpi0_nonueCC_PC_bnb                            kine_reco_Enu   25      0       2500    6       0               0       0               0               0               5       unity           0
+NCpi0_nonueCC_bnb                               kine_reco_Enu   25      0       2500    7       0               0       0               0               0               5       unity           0
+
+nueCC_FC_nueoverlay                             kine_reco_Enu   25      0       2500    1       1               1       0               0               1               1       cv_spline       0
+nueCC_PC_nueoverlay                             kine_reco_Enu   25      0       2500    2       1               1       0               0               2               1       cv_spline       0
+BG_nueCC_FC_overlay                             kine_reco_Enu   25      0       2500    1       1               1       0               0               1               2       cv_spline       0
+BG_nueCC_PC_overlay                             kine_reco_Enu   25      0       2500    2       1               1       0               0               2               2       cv_spline       0
+numuCC_nopi0_nonueCC_FC_overlay                 kine_reco_Enu   25      0       2500    3       1               1       0               0               3               2       cv_spline       0
+numuCC_nopi0_nonueCC_PC_overlay                 kine_reco_Enu   25      0       2500    4       1               1       0               0               4               2       cv_spline       0
+CCpi0_nonueCC_FC_overlay                        kine_reco_Enu   25      0       2500    5       1               1       0               0               5               2       cv_spline       0
+CCpi0_nonueCC_PC_overlay                        kine_reco_Enu   25      0       2500    6       1               1       0               0               6               2       cv_spline       0
+NCpi0_nonueCC_overlay                           kine_reco_Enu   25      0       2500    7       1               1       0               0               7               2       cv_spline       0
+
+BG_nueCC_FC_ext                                 kine_reco_Enu   25      0       2500    1       0               0       0               0               8               3       unity           0
+BG_nueCC_PC_ext                                 kine_reco_Enu   25      0       2500    2       0               0       0               0               9               3       unity           0
+BG_numuCC_nopi0_nonueCC_FC_ext                  kine_reco_Enu   25      0       2500    3       0               0       0               0               10              3       unity           0
+BG_numuCC_nopi0_nonueCC_PC_ext                  kine_reco_Enu   25      0       2500    4       0               0       0               0               11              3       unity           0
+BG_CCpi0_nonueCC_FC_ext                         kine_reco_Enu   25      0       2500    5       0               0       0               0               12              3       unity           0
+BG_CCpi0_nonueCC_PC_ext                         kine_reco_Enu   25      0       2500    6       0               0       0               0               13              3       unity           0
+BG_NCpi0_nonueCC_ext                            kine_reco_Enu   25      0       2500    7       0               0       0               0               14              3       unity           0
+
+BG_nueCC_FC_dirt                                kine_reco_Enu   25      0       2500    1       1               1       0.5             0               1               4       cv_spline       0
+BG_nueCC_PC_dirt                                kine_reco_Enu   25      0       2500    2       1               1       0.5             0               2               4       cv_spline       0
+BG_numuCC_nopi0_nonueCC_FC_dirt                 kine_reco_Enu   25      0       2500    3       1               1       0.5             0               3               4       cv_spline       0
+BG_numuCC_nopi0_nonueCC_PC_dirt                 kine_reco_Enu   25      0       2500    4       1               1       0.5             0               4               4       cv_spline       0
+BG_CCpi0_nonueCC_FC_dirt                        kine_reco_Enu   25      0       2500    5       1               1       0.5             0               5               4       cv_spline       0
+BG_CCpi0_nonueCC_PC_dirt                        kine_reco_Enu   25      0       2500    6       1               1       0.5             0               6               4       cv_spline       0
+BG_NCpi0_nonueCC_dirt                           kine_reco_Enu   25      0       2500    7       1               1       0.5             0               7               4       cv_spline       0
+
+nueCC_FC_numu2nueoverlay                        kine_reco_Enu   25      0       2500    1       1               1       0               0               15              6       cv_spline       0
+nueCC_PC_numu2nueoverlay                        kine_reco_Enu   25      0       2500    2       1               1       0               0               16              6       cv_spline       0
+numuCC_nopi0_nonueCC_FC_numu2nueoverlay         kine_reco_Enu   25      0       2500    3       1               1       0               0               17              6       cv_spline       0
+numuCC_nopi0_nonueCC_PC_numu2nueoverlay         kine_reco_Enu   25      0       2500    4       1               1       0               0               18              6       cv_spline       0
+CCpi0_nonueCC_FC_numu2nueoverlay                kine_reco_Enu   25      0       2500    5       1               1       0               0               19              6       cv_spline       0
+CCpi0_nonueCC_PC_numu2nueoverlay                kine_reco_Enu   25      0       2500    6       1               1       0               0               20              6       cv_spline       0
+NCpi0_nonueCC_numu2nueoverlay                   kine_reco_Enu   25      0       2500    7       1               1       0               0               21              6       cv_spline       0
+
+nueCC_FC_numi                                   kine_reco_Enu   25      0       2500    8       0               0       0               0               0               15      unity           0
+nueCC_PC_numi                                   kine_reco_Enu   25      0       2500    9       0               0       0               0               0               15      unity           0
+numuCC_nopi0_nonueCC_FC_numi                    kine_reco_Enu   25      0       2500    10      0               0       0               0               0               15      unity           0
+numuCC_nopi0_nonueCC_PC_numi                    kine_reco_Enu   25      0       2500    11      0               0       0               0               0               15      unity           0
+CCpi0_nonueCC_FC_numi                           kine_reco_Enu   25      0       2500    12      0               0       0               0               0               15      unity           0
+CCpi0_nonueCC_PC_numi                           kine_reco_Enu   25      0       2500    13      0               0       0               0               0               15      unity           0
+NCpi0_nonueCC_numi                              kine_reco_Enu   25      0       2500    14      0               0       0               0               0               15      unity           0
+
+nueCC_FC_nueoverlay_numi                        kine_reco_Enu   25      0       2500    8       1               1       0               0               22              11      cv_spline       0
+nueCC_PC_nueoverlay_numi                        kine_reco_Enu   25      0       2500    9       1               1       0               0               23              11      cv_spline       0
+BG_nueCC_FC_overlay_numi                        kine_reco_Enu   25      0       2500    8       1               1       0               0               22              12      cv_spline       0
+BG_nueCC_PC_overlay_numi                        kine_reco_Enu   25      0       2500    9       1               1       0               0               23              12      cv_spline       0
+numuCC_nopi0_nonueCC_FC_overlay_numi            kine_reco_Enu   25      0       2500    10      1               1       0               0               24              12      cv_spline       0
+numuCC_nopi0_nonueCC_PC_overlay_numi            kine_reco_Enu   25      0       2500    11      1               1       0               0               25              12      cv_spline       0
+CCpi0_nonueCC_FC_overlay_numi                   kine_reco_Enu   25      0       2500    12      1               1       0               0               26              12      cv_spline       0
+CCpi0_nonueCC_PC_overlay_numi                   kine_reco_Enu   25      0       2500    13      1               1       0               0               27              12      cv_spline       0
+NCpi0_nonueCC_overlay_numi                      kine_reco_Enu   25      0       2500    14      1               1       0               0               28              12      cv_spline       0
+
+BG_nueCC_FC_ext_numi                            kine_reco_Enu   25      0       2500    8       0               0       0               0               29              13      unity           0
+BG_nueCC_PC_ext_numi                            kine_reco_Enu   25      0       2500    9       0               0       0               0               30              13      unity           0
+BG_numuCC_nopi0_nonueCC_FC_ext_numi             kine_reco_Enu   25      0       2500    10      0               0       0               0               31              13      unity           0
+BG_numuCC_nopi0_nonueCC_PC_ext_numi             kine_reco_Enu   25      0       2500    11      0               0       0               0               32              13      unity           0
+BG_CCpi0_nonueCC_FC_ext_numi                    kine_reco_Enu   25      0       2500    12      0               0       0               0               33              13      unity           0
+BG_CCpi0_nonueCC_PC_ext_numi                    kine_reco_Enu   25      0       2500    13      0               0       0               0               34              13      unity           0
+BG_NCpi0_nonueCC_ext_numi                       kine_reco_Enu   25      0       2500    14      0               0       0               0               35              13      unity           0
+
+BG_nueCC_FC_dirt_numi                           kine_reco_Enu   25      0       2500    8       1               1       0.5             0               22              14      cv_spline       0
+BG_nueCC_PC_dirt_numi                           kine_reco_Enu   25      0       2500    9       1               1       0.5             0               23              14      cv_spline       0
+BG_numuCC_nopi0_nonueCC_FC_dirt_numi            kine_reco_Enu   25      0       2500    10      1               1       0.5             0               24              14      cv_spline       0
+BG_numuCC_nopi0_nonueCC_PC_dirt_numi            kine_reco_Enu   25      0       2500    11      1               1       0.5             0               25              14      cv_spline       0
+BG_CCpi0_nonueCC_FC_dirt_numi                   kine_reco_Enu   25      0       2500    12      1               1       0.5             0               26              14      cv_spline       0
+BG_CCpi0_nonueCC_PC_dirt_numi                   kine_reco_Enu   25      0       2500    13      1               1       0.5             0               27              14      cv_spline       0
+BG_NCpi0_nonueCC_dirt_numi                      kine_reco_Enu   25      0       2500    14      1               1       0.5             0               28              14      cv_spline       0
+
+nueCC_FC_numu2nueoverlay_numi                   kine_reco_Enu   25      0       2500    8       1               1       0               0               36              16      cv_spline       0
+nueCC_PC_numu2nueoverlay_numi                   kine_reco_Enu   25      0       2500    9       1               1       0               0               37              16      cv_spline       0
+numuCC_nopi0_nonueCC_FC_numu2nueoverlay_numi    kine_reco_Enu   25      0       2500    10      1               1       0               0               38              16      cv_spline       0
+numuCC_nopi0_nonueCC_PC_numu2nueoverlay_numi    kine_reco_Enu   25      0       2500    11      1               1       0               0               39              16      cv_spline       0
+CCpi0_nonueCC_FC_numu2nueoverlay_numi           kine_reco_Enu   25      0       2500    12      1               1       0               0               40              16      cv_spline       0
+CCpi0_nonueCC_PC_numu2nueoverlay_numi           kine_reco_Enu   25      0       2500    13      1               1       0               0               41              16      cv_spline       0
+NCpi0_nonueCC_numu2nueoverlay_numi              kine_reco_Enu   25      0       2500    14      1               1       0               0               42              16      cv_spline       0
+
+End                                     	End             -1      -1      -1      -1      -1              -1      -1              -1              -1              -1      end             -1
+Name:                                   	#Var:           #bin    #start  #end    #obs    #xs_flux        #det    #add_sys        #same_mc        #cov_sec        #file   #weight         #lee_strength
+
