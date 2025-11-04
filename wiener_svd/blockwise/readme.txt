@@ -1,0 +1,23 @@
+
+This directory is a skeleton demonstration on how to set up and use blockwise unfolding. Instructions are below.
+
+To run this in wcp-uboone-bdt, one must have separate cov_input configurations for each measurement + one additional configuration for the "blockwise" systematics. The latter has separate channels for each measurement analogous to how you have things when you are doing the conditional constraint for model validation. There are examples for all of these in this folder. You will also need to make xs_ch and xs_real_bins for each measurement. When you make these, note that the ordering of the channels is hardcoded in convert_wiener_sim.C, so triple check that things match with what is assumed there.
+
+Run the detector and flux uncertainties for the blockwise configuration. These give you cov_1.root - cov_16.root and the cov_XX corresponding to each detvar. These use the blockwise configuration, so they have the correlations between measurements.
+
+Run the applications that does the MC stat correlations between the blocks (currently, we are using boostrapping, it might be worth trying to do it "exact"). You can choose to use only the mc for this and run only stat_pred_cov_matrix.cxx, or do both data and mc and run stat_cov_matrix.cxx. If you are doing the former, you will have to modify the example convert_wiener_sim.C script in this folder.
+
+A modification to master_cov_matrix.cxx is needed to dump out the xs universes in addition to the covariance matrix. You will need the latter to for the blockwise xs matrix. You can get this from here: https://github.com/eyandel/wcp-uboone-bdt/tree/combinedreco. Note that this branch also has the relevant changes to run MCC9.10 samples.  
+
+Run the configuration for each measurement, but just for the part that forms cov_xs.root, merge_xs.root and xs_tot.log. The modified master_cov_matrix.cxx will give you root files with the universes in addition to just the final cov matrix. To activate this feature, you give that app an argument using -u that is greater than 0. For bookkeeping later on, the number you give it should match the order of the measurements you have in the blockwise cov_input. When you do this step, make sure you are using the cov_input.txt, xs_ch.txt, and xs_real_bins.txt for the given measurement. You will need to rename the merge_xs.root to merge_xsX.root, where the X should match the argument you are feeding master_cov_matrix.cxx and the ordering of the measurement is the blockwise configuration. You also have to do the same thing for the xs_tot.log that you are using for the mc stat; you should have one for each measurement.
+
+After running this for all measurements, run a separate app that takes the histograms for the xs universes from each measurement and universe by universe goes through and forms the blockwise xs cov matrix. This app is in this folder and is named make_cov_xs_block_matrix.C. You will need to go into this file and set the number of measurements you have.
+
+Run a special version of convert_wiener, which is in this folder and name convert_wiener_sim.C, that knows how to handle the blockwise form. You should have everything set up in the same way you normally do in the weiner_svd folder. Just make sure that when you do this, you have also included the blockwise cov matrix and each of the merge_xs.root and xs_tot.log. You will need to go into this script and set the 2D/3d binning you have. There are also some other flags you can go in there and set to control different options. Triple check that you have the channels in the right order in your configuration.
+
+You should now have a wienerX.root for each of your measurements. You can go ahead and run the wiener svd unfolding app on all of them and make yourself outputX.root. The Ac matrix is formed separately for each, hence the need to run it separately for each.
+
+With all of these, you can run print_xs_sim.C. This will print off various information depending on which flag you feed it. It can be used to make files for the data release, or just print a bunch of general info. If you do not want the output as a .txt, you can tweak it as you see fit. This is the actual app that forms the blockwise cov matrix by stitching together the Ac matrix for each measurement then doing the transformation.
+
+Lastly, I have also included gen_compare_demo.C. This is what I used for generator comparisons and what is included in the data releases. You would have to tweak the last part of this code just a bit for your measurement, but it integrates fairly easily with the printing from the print_xs_sim.C application.
+

@@ -1,0 +1,27 @@
+ncpi0_FC_0p                                       pi0_momentum    15   0    900    1    0    0    0    0    0    5    unity        0
+ncpi0_FC_Np                                       pi0_momentum    15   0    900    2    0    0    0    0    0    5    unity        0
+ncpi0_PC_0p                                       pi0_momentum    15   0    900    3    0    0    0    0    0    5    unity        0
+ncpi0_PC_Np                                       pi0_momentum    15   0    900    4    0    0    0    0    0    5    unity        0
+ncpi0_signal_noEnu_mom_FC_0p_overlay                    pi0_momentum    15   0    900    1    1    1    0    0    1    6    cv_spline    0
+ncpi0_signal_noEnu_mom_FC_Np_overlay                    pi0_momentum    15   0    900    2    1    1    0    0    2    6    cv_spline    0
+ncpi0_signal_noEnu_mom_PC_0p_overlay                    pi0_momentum    15   0    900    3    1    1    0    0    3    6    cv_spline    0
+ncpi0_signal_noEnu_mom_PC_Np_overlay                    pi0_momentum    15   0    900    4    1    1    0    0    4    6    cv_spline    0
+ncpi0_background_noEnu_noCCpi0_mom_FC_0p_overlay        pi0_momentum    15   0    900    1    1    1    0    0    5    2    cv_spline    0
+ncpi0_background_noEnu_noCCpi0_mom_FC_Np_overlay        pi0_momentum    15   0    900    2    1    1    0    0    6    2    cv_spline    0
+ncpi0_background_noEnu_noCCpi0_mom_PC_0p_overlay        pi0_momentum    15   0    900    3    1    1    0    0    7    2    cv_spline    0
+ncpi0_background_noEnu_noCCpi0_mom_PC_Np_overlay        pi0_momentum    15   0    900    4    1    1    0    0    8    2    cv_spline    0
+BG_ncpi0_FC_0p_ext                                pi0_momentum    15   0    900    1    0    0    0    0    9    3    unity        0
+BG_ncpi0_FC_Np_ext                                pi0_momentum    15   0    900    2    0    0    0    0    10   3    unity        0
+BG_ncpi0_PC_0p_ext                                pi0_momentum    15   0    900    3    0    0    0    0    11   3    unity        0
+BG_ncpi0_PC_Np_ext                                pi0_momentum    15   0    900    4    0    0    0    0    12   3    unity        0
+BG_ncpi0_FC_0p_dirt                               pi0_momentum    15   0    900    1    1    0    0.5  0    5    4    cv_spline    0
+BG_ncpi0_FC_Np_dirt                               pi0_momentum    15   0    900    2    1    0    0.5  0    6    4    cv_spline    0
+BG_ncpi0_PC_0p_dirt                               pi0_momentum    15   0    900    3    1    0    0.5  0    7    4    cv_spline    0
+BG_ncpi0_PC_Np_dirt                               pi0_momentum    15   0    900    4    1    0    0.5  0    8    4    cv_spline    0
+ncpi0_background_noEnu_CCpi0_mom_FC_0p_overlay          pi0_momentum    15   0    900    1    1    1    0    0    5    8    cv_spline    0
+ncpi0_background_noEnu_CCpi0_mom_FC_Np_overlay          pi0_momentum    15   0    900    2    1    1    0    0    6    8    cv_spline    0
+ncpi0_background_noEnu_CCpi0_mom_PC_0p_overlay          pi0_momentum    15   0    900    3    1    1    0    0    7    8    cv_spline    0
+ncpi0_background_noEnu_CCpi0_mom_PC_Np_overlay          pi0_momentum    15   0    900    4    1    1    0    0    8    8    cv_spline    0
+
+End                                     End             -1      -1      -1      -1      -1              -1      -1              -1              -1              -1      end             -1
+Name:                                   #Var:           #bin    #start  #end    #obs    #xs_flux        #det    #add_sys        #same_mc        #cov_sec        #file   #weight         #lee_strength
