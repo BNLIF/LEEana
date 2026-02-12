@@ -7,10 +7,10 @@ for (my $i=1;$i<=10;$i++){
           print "Skip WireMod dEdx \n";
         }
 	else {
-	  system("./bin/det_cov_matrix -r$i &");
+	  system("./bin/det_cov_matrix -r$i -bholly_antinue_bdt&");
         }
     }else{
 	print "Oscillation! \n"; 
-	system("./bin/det_cov_matrix -r$i -o1 &");
+	system("./bin/det_cov_matrix -r$i -o1 -bholly_antinue_bdt&");
     }
 }
