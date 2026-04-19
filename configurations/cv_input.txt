@@ -14,6 +14,9 @@
 4	DIRT			2		./processed_checkout_rootfiles/checkout_prodgenie_dirt_overlay_run2_all.root			./hist_rootfiles/checkout_prodgenie_dirt_overlay_run2.root			0		14	0	2
 4	DIRT			3		./processed_checkout_rootfiles/checkout_prodgenie_dirt_overlay_run3_all.root		        ./hist_rootfiles/checkout_prodgenie_dirt_overlay_run3.root			0		15	0	3
 -1	end			-1		end												end										-1		-1	-1	-1
+# ===== DEAD BLOCKS BELOW — NOT READ BY THE PARSER =====
+# These are historical configurations. To activate one,
+# move its contents to the block above the first "-1 end" line.
 #file	#type			#period		#filename											#outfile_name									#ext_pot	#file_no  #norm		#norm_period
 1	intrinsic_nue		1		./processed_checkout_rootfiles/checkout_prodgenie_bnb_intrinsic_nue_overlay_run1.root		./hist_rootfiles/checkout_prodgenie_bnb_intrinsic_nue_overlay_run1.root		0		1	0	1
 1	intrinsic_nue		3		./processed_checkout_rootfiles/checkout_prodgenie_bnb_intrinsic_nue_overlay_run3.root		./hist_rootfiles/checkout_prodgenie_bnb_intrinsic_nue_overlay_run3.root		0		2	0	3
