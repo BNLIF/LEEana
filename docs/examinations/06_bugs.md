@@ -88,6 +88,8 @@ if (it == map_bnb_infos.end()) {
 ```
 Also guard `argc < 3` for mode-2 invocations.
 
+**Fixed:** commit `7cefde9` — both BNB and EXTBNB guards restructured to `if(it==end){if range: print}else{deref}` so out-of-range run numbers no longer reach the dereference. Covered by `test/test_leeana_bugs.sh` (L-02-bnb, L-02-ext).
+
 ---
 
 ### L-03 — `plot_hist.cxx` TString substring drops last 2 characters of input path
@@ -120,6 +122,8 @@ that happens to end in two characters that, when dropped, still resolve to a val
 `cov_inputfile = sss(2, sss.Length())` (second argument is number of chars to take,
 so `Length()` takes all remaining).
 
+**Fixed:** commit `7cefde9` — `sss(2, sss.Length()-2)` → `sss(2, sss.Length())`. Covered by `test/test_leeana_bugs.sh` (L-03).
+
 ---
 
 ### L-04 — `det_cov_matrix.cxx` bootstrap output key misspelled; consumers fail silently
@@ -146,6 +150,8 @@ this key (grep for `cov_mat_b.ostrapping`) and verify they use the same spelling
 
 **Note:** The companion audit labels this differently; check B-17 in the sibling doc
 for related hardcoded-key findings.
+
+**Fixed:** commit `7cefde9` — typo corrected to `"cov_mat_bootstrapping_%d"`. Covered by `test/test_leeana_bugs.sh` (L-04-typo, L-04-fixed).
 
 ---
 
@@ -177,6 +183,8 @@ with no useful error message (the exception is uncaught at main).
 **Fix sketch:** Add the `.find()` guard before the `.at()` call, consistent with the
 `_partial_trees` variant.
 
+**Fixed:** commit `7cefde9` — `find()` guard added before `at()` in both the `UBGenieFluxSmallUni` loop and the single-knob else-branch. Covered by `test/test_leeana_bugs.sh` (L-05).
+
 ---
 
 ### L-06 — GP kernel mutates cached GPPoint coordinates in-place [dup B-02]
@@ -207,6 +215,8 @@ dist += (v1 - v2) * (v1 - v2) / (fPars[i] * fPars[i]);
 ```
 
 See `wcp-uboone-bdt/docs/examinations/05_bugs.md:B-02` for extended analysis.
+
+**Fixed:** commit `b24aaa7` (as B-02) — guard moved before log-transform loop; zero-scale dimensions skipped in the transform so `log()` is never called on them. Covered by `test/test_gpkernel.cxx`.
 
 ---
 
