@@ -4,11 +4,10 @@
 #central histogram preparation ...// Xs mode ...
 system("./convert_histo.pl 1");
 
-#Det sys
-system("./run_det_sys.pl");
-
-#Flux sys, GEANT4 1-->16, plus UBGenieFluxSmallUni (knob 17)
-system("./run_xf_sys.pl");
+#Det sys + Flux sys run in parallel (independent: write to DetVar/ and XsFlux/ respectively)
+system("./run_det_sys.pl &");
+system("./run_xf_sys.pl &");
+wait();
 
 #Xs sys, POT, target nucleon ... cov_xs.root ...
 system("./bin/xs_cov_matrix -r17");
