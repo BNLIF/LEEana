@@ -318,6 +318,8 @@ either delete the dead tail blocks, or clearly mark them with a prominent commen
 # move its contents to the block above the first -1 end line.
 ```
 
+**Fixed:** commit `66184a1` (LEEana) — comment block inserted immediately after the first `-1 end` sentinel. The historical blocks are retained for reference but are now clearly marked as dead. No test needed (pure comment addition).
+
 ---
 
 ### L-11 — `merge_hist.cxx` accumulates `TFile` handles in a loop (FD leak)
@@ -374,6 +376,8 @@ aggregated, or activate `outfile_name = Form("./hist_rootfiles/run%d_data_stat.r
 
 **Identical pattern** exists in `stat_pred_cov_matrix.cxx:52`.
 
+**Deferred:** Activating the per-run output path would break downstream consumers (e.g. `run_gof.pl`) that always read the aggregated path `run_data_stat.root`. Removing the `-r` flag is also a user-visible API change. Needs author decision on whether the aggregated or per-run behaviour is intended.
+
 ---
 
 ### L-13 — `det_cov_matrix.cxx` hard-codes 25% floor for zero-prediction diagonal
@@ -395,6 +399,8 @@ non-physics-motivated way.
 the average fractional covariance of adjacent non-zero bins (interpolation), or
 excluding such bins from the detector covariance entirely (the `add_disabled_ch_name`
 mechanism already exists for this).
+
+**Deferred:** Same as B-21 — the 25% floor is a physics placeholder. Changing it requires systematics owner sign-off; see B-21 in `wcp-uboone-bdt/docs/examinations/05_bugs.md`.
 
 ---
 
@@ -457,6 +463,8 @@ than the author's. All four `system()` calls reference absolute paths under
 **Fix sketch:** Replace hard-coded paths with variables or config-file entries.
 At minimum, add `die "..." if $? != 0;` after each `system()` call.
 
+**Fixed:** commit `66184a1` (LEEana) — `die "... failed: $?" if $?;` added after each of the four `system()` calls so a non-zero exit propagates as a script failure. The host-specific path replacement remains deferred pending a portable convention decision.
+
 ---
 
 ### L-17 — `summarize_pot.pl` hard-codes host-specific paths
@@ -464,6 +472,8 @@ At minimum, add `die "..." if $? != 0;` after each `system()` call.
 **Symptom:** Same issue. References `/data0/xqian/MicroBooNE/run4a_files/...`.
 
 **Location:** `summarize_pot.pl:4-6`
+
+**Fixed:** commit `66184a1` (LEEana) — `die "... failed: $?" if $?;` added after each `system()` call. Host-specific path replacement deferred (same rationale as L-16).
 
 ---
 
@@ -497,6 +507,8 @@ compiled code (which reads them in different contexts), but is a maintenance haz
 - `configurations/file_ch.txt:46` — sentinel `end end`
 - `configurations/xf_file_ch.txt` — sentinel `End End`
 
+**Deferred:** The audit notes this is **not currently a bug** — only a maintenance hazard. The two files are read in different contexts; no compiled code assumes the same sentinel for both. Normalising the case would require touching configuration files and verifying all parsers, for a hazard that has not caused any reported failure.
+
 ---
 
 ### L-20 — `run_det_sys.pl` oscillation mode runs all 10 sources including WireModdEdx
@@ -522,6 +534,8 @@ if ($num1 == 0) {
 oscillation analyses. If it does, add the same `if ($i == 5)` guard in the oscillation
 branch.
 
+**Deferred:** Whether WireModdEdx should be skipped in oscillation mode is a physics decision. Only the analysis author can confirm if the same exclusion rationale applies to oscillation analyses.
+
 ---
 
 ### L-21 — `prune_weight` family has three copy-paste variants that have diverged
@@ -538,6 +552,8 @@ others. Users may silently use the wrong variant for their production epoch.
 **Fix sketch:** Create a single parametrised implementation that selects knob lists and
 padding behaviour from command-line flags or a config file. At minimum, backport the
 `.find()` guard to all three sep24 variants.
+
+**Deferred:** Backporting `.find()` guard requires case-by-case inspection of each `.at()` call site to choose the right fallback semantics (skip? default weight? abort?); not a one-liner. The full single-binary refactor is a larger structural change. Both options need author input.
 
 ---
 
@@ -564,6 +580,8 @@ The usage string inside the binary prints the correct spelling.
 **Locations:**
 - `wcp-uboone-bdt/apps/applyNuMIGeomtryWeights.cxx` (file name)
 - `merge_numi_flux_geom.pl:3,6,8,10` (callers)
+
+**Deferred:** Renaming the binary is a public-API change — any external script or shell history that calls `./bin/applyNuMIGeomtryWeights` would break. The rename must touch the source filename (`git mv`), the WAF build target, and all callers atomically; not a safe one-liner.
 
 ---
 
