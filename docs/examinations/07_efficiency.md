@@ -120,7 +120,7 @@ Cloning the histograms detaches them from the TFile, allowing safe closure.
 
 ## E-05 — Multiple full traversals of the same ROOT TTree in `merge_det.cxx`
 
-**Deferred:** Single-pass refactor requires buffering matched events in memory (or an indexed TChain) between the three passes. Needs a fixture dataset to verify that the single-pass output is bit-identical to the three-pass output.
+**Deferred (audit framing was misleading — re-investigated in Wave 7):** Pass 1 (line 909) reads `T_eval_cv`; pass 2 (line 931) reads `T_eval_det` — these are *different trees* and cannot be merged. Pass 3 (line 987) needs `GetEntry` on all 8 trees to populate the `Fill()` branch buffers; eliminating it would require buffering the full struct contents of every event from passes 1 and 2 in RAM (potentially tens of GB for O(10M)-event detector-variation samples). The current code already performs the minimum required disk reads. Remains deferred.
 
 **Layer:** C++ (`merge_det.cxx`)
 **Impact:** Medium — 3× event loop over a potentially large TTree.
