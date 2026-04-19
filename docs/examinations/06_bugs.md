@@ -233,6 +233,8 @@ the function under the name `MatrixMatirx` (typo), which does not match.
 **Fix sketch:** Rename either the declaration or the definition (choose one consistent
 spelling) and update all call sites.
 
+**Fixed:** commit `c130e78` (wcp-uboone-bdt) — definition renamed from `MatrixMatirx` to `MatrixMatrix` in `src/Util.cxx`. See B-22.
+
 ---
 
 ## MEDIUM severity
@@ -270,6 +272,8 @@ if ((failed_num > it->second.size() * fail_percentage && failed_num != 1) ||
     (failed_num > it->second.size() * 0.33 && failed_num == 1))
 ```
 
+**Fixed:** commit `c130e78` (wcp-uboone-bdt) — explicit parentheses added; no semantic change.
+
 ---
 
 ### L-09 — `convert_histo.pl` uses numeric `!=` to filter string header line
@@ -292,6 +296,8 @@ filtered). The logic is accidentally correct because `"#file"` numifies to 0 and
 `0 != 0` is false. But this depends on non-obvious Perl string-to-number coercion.
 
 **Fix sketch:** Use string comparison: `if ($temp[0] ne "-1" && $temp[0] ne "#file")`.
+
+**Fixed:** commit `72401a0` (LEEana) — `!=` replaced with `ne`; `"\#file"` replaced with `"#file"`. Covered by `test/test_remaining_bugs.sh` (L-09).
 
 ---
 
@@ -342,6 +348,8 @@ delete temp_file;
 Or accumulate all histogram names first, then open/read/close per file.
 
 See efficiency finding E-04.
+
+**Fixed:** commit `7e4fa66` (wcp-uboone-bdt) — histograms detached via `SetDirectory(nullptr)` after `Get()`; `Close()/delete` called per iteration. See B-10. Covered by `test/test_remaining_bugs.sh` (B-10).
 
 ---
 
@@ -407,6 +415,8 @@ finish in time; on a slow machine or under load, it may not.
 **Fix sketch:** Remove the `&` from line 8 (run `stat_pred_cov_matrix` synchronously),
 or add a `wait` call after line 8 (blocks until it finishes before proceeding).
 
+**Fixed:** commit `72401a0` (LEEana) — trailing `&` removed; `stat_pred_cov_matrix` now runs synchronously. Covered by `test/test_remaining_bugs.sh` (L-14).
+
 ---
 
 ### L-15 — `pot_counting.cxx` accesses `argv[2]` when only `argc >= 2` is guaranteed
@@ -427,6 +437,8 @@ The mode is parsed only after these lines (lines 31-37). Even if mode=1 does not
 
 **Fix sketch:** Move the argv assignments after mode parsing, and guard with
 `if (argc > 2)` for `extbnb_file`.
+
+**Fixed:** commit `7e4fa66` (wcp-uboone-bdt) — `extbnb_file` initialised as `(argc > 2) ? argv[2] : ""`. Covered by `test/test_remaining_bugs.sh` (L-15).
 
 ---
 
@@ -470,6 +482,8 @@ system("./bin/check_xf_weight_xs $temp[2]");
 ```
 
 **Fix sketch:** Change `$temp[2]` to `$temp[3]`.
+
+**Fixed:** commit `72401a0` (LEEana) — column index corrected to `$temp[3]`. Covered by `test/test_remaining_bugs.sh` (L-18).
 
 ---
 
@@ -534,6 +548,8 @@ debug messages that were never removed after development.
 
 **Location:** `wcp-uboone-bdt/src/WienerSVD_3D.C:284, 301, 303, 308, 312-325`
 
+**Fixed:** commit `c130e78` (wcp-uboone-bdt) — all debug `cout` lines removed from `C3_3D` in `WienerSVD_3D.C`.
+
 ---
 
 ## STYLE
@@ -555,12 +571,16 @@ The usage string inside the binary prints the correct spelling.
 
 **Location:** `readme:26` — `./bin/pot_countng_mc` should be `./bin/pot_counting_mc`.
 
+**Fixed:** commit `a10a47e` (LEEana) — typo corrected.
+
 ---
 
 ### L-25 — `readme` line 32 uses singular `./configuration/` (missing 's')
 
 **Location:** `readme:32` — `./configuration/cv_input.txt` should be
 `./configurations/cv_input.txt`. Will mislead new users looking for the config directory.
+
+**Fixed:** commit `a10a47e` (LEEana) — path corrected to `./configurations/cv_input.txt`.
 
 ---
 
@@ -569,6 +589,8 @@ The usage string inside the binary prints the correct spelling.
 **Location:** `run_xs.pl:10` — comment says "GEANT4 1-->16"; `run_xf_sys.pl` loops
 `$i=1; $i<18` (1 through 17 inclusive). The 17th knob (`UBGenieFluxSmallUni`) is a
 genuine systematic, not GEANT4. The comment is misleading on both counts.
+
+**Fixed:** commit `a10a47e` (LEEana) — comment updated to note knob 17 (UBGenieFluxSmallUni).
 
 ---
 
@@ -580,6 +602,8 @@ genuine systematic, not GEANT4. The comment is misleading on both counts.
 
 These are baked into the public API and into any call sites in `read_TLee_v20.cxx`.
 Renaming requires updating all callers.
+
+**Fixed:** commit `1ce784b` (wcp-uboone-bdt) — renamed at all six sites. See B-23. Covered by `test/test_feldman_rename.sh`.
 
 ---
 
