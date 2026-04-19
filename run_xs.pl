@@ -7,7 +7,7 @@ system("./convert_histo.pl 1");
 #Det sys
 system("./run_det_sys.pl");
 
-#Flux sys, GEANT4 1-->16
+#Flux sys, GEANT4 1-->16, plus UBGenieFluxSmallUni (knob 17)
 system("./run_xf_sys.pl");
 
 #Xs sys, POT, target nucleon ... cov_xs.root ...

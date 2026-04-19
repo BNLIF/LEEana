@@ -26,10 +26,10 @@ not needed if using most recent WCP to produce the samples
 ./summarize_pot.pl 
 <-- input database files in pot_counting [from Haiwang]
 --> output pot_bnb.txt and pot_extbnbn.txt to be consumed by app pot_counting 
-./bin/pot_countng_mc #mc_file
+./bin/pot_counting_mc #mc_file
 ./bin/pot_counting #bnb_file                   --> get the POT for BNB ...
 ./bin/pot_counting #bnb_file  #extbnb_file -m2 --> get the POT for EXTBNB ...
-change ext_POT in ./configuration/cv_input.txt
+change ext_POT in ./configurations/cv_input.txt
 
 3 ./convert_histo.pl
   For CV rootfiles, store the histograms in ./hist_rootfiles ...
