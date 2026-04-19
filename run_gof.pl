@@ -5,7 +5,7 @@
 system("./convert_histo.pl");
 
 #data statistical uncertainties
-system("./bin/stat_pred_cov_matrix -r0 &");
+system("./bin/stat_pred_cov_matrix -r0"); # L-14 fix: run synchronously before merge_hist needs it
 
 #Det sys
 system("./run_det_sys.pl");

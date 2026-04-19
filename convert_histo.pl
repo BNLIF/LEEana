@@ -14,7 +14,7 @@ while(<infile>){
 	last;
     }
     
-    if ($temp[0] !=-1 && $temp[0] != "\#file"){
+    if ($temp[0] ne "-1" && $temp[0] ne "#file"){
 	print "$temp[3]\n";
 	if ($num %12 == 11){
 	    if ($num1 == 0){
