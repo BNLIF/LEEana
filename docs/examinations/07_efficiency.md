@@ -12,6 +12,8 @@ on the C++ library layer.
 
 ## E-01 — Minuit FCN rebuilds and inverts full covariance on every evaluation
 
+**Deferred:** Caching the systematic covariance and using Sherman-Morrison FCN updates requires restructuring `Minimization_Lee_strength_FullCov`; needs validation against a reference fit result. Same scope as wcp-uboone-bdt E-05.
+
 **Layer:** C++ (`TLee.cxx`)
 **Impact:** Severe — repeated O(N³) matrix inversion inside the optimisation loop.
 
@@ -39,6 +41,8 @@ pre-inverted system matrix.
 
 ## E-02 — `run_mc_stat.pl` spawns 100 concurrent `merge_hist` processes
 
+**Deferred:** The ideal fix (add `-l_sweep start:step:stop` to `merge_hist` for a single-pass sweep over all LEE strengths) is a non-trivial feature add touching CLI parsing, the histogram output scheme, and potentially ~100 downstream consumers of the per-strength output files. A safer near-term option (throttle via semaphore) also needs profiling to set the right parallelism limit.
+
 **Layer:** Orchestration (`run_mc_stat.pl`)
 **Impact:** High — massively oversubscribes CPUs; I/O contention on the histogram files.
 
@@ -64,6 +68,8 @@ accept the sequential cost (~5 min × 100 = 8h → replace with one 5-min run).
 
 ## E-03 — `run_xs.pl` runs det_sys and xf_sys serially despite independence
 
+**Fixed:** commit 1e79ab9 — `run_xs.pl` now backgrounds `run_det_sys.pl` and `run_xf_sys.pl` then calls `wait()`. Both scripts write to disjoint output directories (`DetVar/` vs `XsFlux/`). Expected wall-clock saving: ~50% of the det+xf phase (~10 min → ~5 min).
+
 **Layer:** Orchestration (`run_xs.pl`)
 **Impact:** Medium — wastes ~10 min of wall-clock time per analysis run.
 
@@ -85,6 +91,8 @@ wait();
 ---
 
 ## E-04 — `merge_hist.cxx` opens all histogram ROOT files simultaneously (FD exhaustion)
+
+**Deferred (already mitigated):** The primary FD accumulation was fixed by B-10 (Wave 2) — `temp_file` is now closed and deleted after histograms are loaded from each file. Remaining RAII clean-up in `xs_cov_matrix`/`det_cov_matrix` is low priority.
 
 **Layer:** C++ (`merge_hist.cxx`)
 **Impact:** Medium — silently fails with zombie TFiles once FD limit (~1024) is reached.
@@ -112,6 +120,8 @@ Cloning the histograms detaches them from the TFile, allowing safe closure.
 
 ## E-05 — Multiple full traversals of the same ROOT TTree in `merge_det.cxx`
 
+**Deferred:** Single-pass refactor requires buffering matched events in memory (or an indexed TChain) between the three passes. Needs a fixture dataset to verify that the single-pass output is bit-identical to the three-pass output.
+
 **Layer:** C++ (`merge_det.cxx`)
 **Impact:** Medium — 3× event loop over a potentially large TTree.
 
@@ -130,6 +140,8 @@ memory (or an indexed TChain), then write in a single sequential pass.
 ---
 
 ## E-06 — `SetBranchStatus("*",1)` silently re-enables all branches after selective disable
+
+**Deferred (audit was incorrect):** `set_tree_address` (eval.h:97–205) registers `SetBranchAddress` on many branches not enumerated in the selective enable list (`flash_*`, `match_type`, `match_isTgm`, `match_charge*`, `truth_isFC`, `match_purity*`, `pl_*`, `gl_*`, `file_type`). The `SetBranchStatus("*",1)` at lines 676 and 814 is required by this broad address setup; flipping to `*,0` would silently zero-fill unenumerated branches at `GetEntry` time. The per-branch calls that follow are redundant no-ops but harmless. Fix requires first auditing and enumerating every address registered by `set_tree_address` and adding `SetBranchStatus` for each before flipping the global.
 
 **Layer:** C++ (`merge_det.cxx:814`, `merge_xf.cxx:647`)
 **Impact:** Medium — undoes per-branch optimisation, causing reads of all branches per
@@ -150,6 +162,8 @@ branches in `T_eval_det` (hundreds in `eval.h`/`tagger.h`).
 
 ## E-07 — Per-event tuple string comparison in histogram-fill inner loop
 
+**Fixed:** commit f027a3d (wcp-uboone-bdt) — `get_weight` string dispatch replaced with `unordered_map` hash lookup + switch; `get_cut_pass` and `get_kine_var` dispatch remain (see wcp E-01). The `get_weight` call is the dominant hit in the systematic-weight loop.
+
 **Layer:** C++ (`convert_checkout_hist.cxx:307-341`)
 **Impact:** Low-to-medium depending on event count.
 
@@ -164,6 +178,8 @@ indices at startup, and use switch/indexed dispatch in the inner loop.
 ---
 
 ## E-08 — `bayes.cxx` sets `TF1::Npx=60000` per component (excessive FFT resolution)
+
+**Deferred:** Reducing `Npx` requires an accuracy budget (< 0.1% error on credible interval) from the physics owner. Same scope as wcp E-03.
 
 **Layer:** C++ (`bayes.cxx`)
 **Impact:** Low — unnecessary CPU per bin.
@@ -187,6 +203,8 @@ int Npx = std::max(1000, 100 * (int)sqrt(weight_sum));
 
 ## E-09 — `run_mc_stat.pl` requires `mc_stat/` directory to pre-exist
 
+**Fixed:** commit 1e79ab9 — added `system("mkdir -p mc_stat")` at the top of `run_mc_stat.pl` before the loop; the `die if $?` guard ensures a missing directory is reported rather than silently corrupting log paths.
+
 **Layer:** Orchestration (`run_mc_stat.pl:6`)
 **Impact:** Low — silent failure if the directory does not exist.
 
@@ -200,6 +218,8 @@ There is no `mkdir -p mc_stat` in the script or in the readme setup instructions
 
 ## E-10 — `summarize_pot.pl` reads the same POT database files twice
 
+**Deferred:** Impact is "negligible" per audit. A single-pass rewrite combining both `cat|grep|awk` pipelines would be cleaner but offers no meaningful speedup.
+
 **Layer:** Orchestration (`summarize_pot.pl:4-6`)
 **Impact:** Negligible — but wasteful.
 
@@ -210,6 +230,8 @@ producing both `pot_bnb.txt` and `pot_extbnb.txt` simultaneously would be cleane
 ---
 
 ## E-11 — Serial Feldman-Cousins toy loop; no ROOT IMT parallelism
+
+**Deferred:** Parallelising over toys (each toy is independent) via `ROOT::TThreadExecutor` or `std::thread` requires verifying that each toy owns its own `TLee` instance with no shared mutable state. Same scope as wcp E-04.
 
 **Layer:** C++ (`read_TLee_v20.cxx:834`)
 **Impact:** Medium — 500 toys × 1 full fit each = potentially hours for complex analyses.
